@@ -26,11 +26,12 @@
   revision = "dc14462fd58732591c7fa58cc8496d6824316a82"
 
 [[projects]]
-  branch = "master"
-  digest = "1:21a338ab8d56ed1117b46cb9b9021d15d6425650af9da750cddb44e4475e9218"
+  branch = "api-v1"
+  digest = "1:2fca47e94e000cc349b28b60fd56c044db44d622e26f582746773457a56c2341"
   name = "github.com/golang/protobuf"
   packages = [
     "descriptor",
+    "internal/wire",
     "jsonpb",
     "proto",
     "protoc-gen-go/descriptor",
@@ -45,7 +46,7 @@
     "ptypes/wrappers",
   ]
   pruneopts = "UT"
-  revision = "d23c5127dc24889085f8ccea5c9d560a57a879d8"
+  revision = "0fd14f96108ad68d2571a78c2d8ef5287ee57c43"
 
 [[projects]]
   digest = "1:582b704bebaa06b48c29b0cec224a6058a09c86883aaddabde889cd1a5f73e1b"
@@ -145,8 +146,8 @@
   name = "github.com/stretchr/testify"
   packages = ["assert"]
   pruneopts = "UT"
-  revision = "624f997379a27f38832b4b22ef5e4d31385c6daf"
-  version = "v1.5.0"
+  revision = "3ebf1ddaeb260c4b1ae502a01c7844fa8c1fa0e9"
+  version = "v1.5.1"
 
 [[projects]]
   branch = "master"
@@ -255,6 +256,51 @@
   pruneopts = "UT"
   revision = "f495f5b15ae7ccda3b38c53a1bfcde4c1a58a2bc"
   version = "v1.27.1"
+
+[[projects]]
+  branch = "master"
+  digest = "1:9793af351d197c27eed06ad620c8414d7e1830094ab274835a6a5cf139abe205"
+  name = "google.golang.org/protobuf"
+  packages = [
+    "encoding/protojson",
+    "encoding/prototext",
+    "internal/descfmt",
+    "internal/descopts",
+    "internal/detrand",
+    "internal/encoding/defval",
+    "internal/encoding/json",
+    "internal/encoding/messageset",
+    "internal/encoding/tag",
+    "internal/encoding/text",
+    "internal/encoding/wire",
+    "internal/errors",
+    "internal/fieldnum",
+    "internal/fieldsort",
+    "internal/filedesc",
+    "internal/filetype",
+    "internal/flags",
+    "internal/genname",
+    "internal/impl",
+    "internal/mapsort",
+    "internal/pragma",
+    "internal/set",
+    "internal/strs",
+    "proto",
+    "reflect/protodesc",
+    "reflect/protoreflect",
+    "reflect/protoregistry",
+    "runtime/protoiface",
+    "runtime/protoimpl",
+    "types/descriptorpb",
+    "types/known/anypb",
+    "types/known/durationpb",
+    "types/known/structpb",
+    "types/known/timestamppb",
+    "types/known/wrapperspb",
+    "types/pluginpb",
+  ]
+  pruneopts = "UT"
+  revision = "466dd772882fa8c3609a31b1665b63040dd084b8"
 
 [[projects]]
   digest = "1:55b110c99c5fdc4f14930747326acce56b52cfce60b24b1c03ef686ac0e46bb1"
