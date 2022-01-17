@@ -145,6 +145,15 @@ func GetFiltering(req proto.Message) (fieldName string, f *query.Filtering, err 
 	return
 }
 
+func GetFullTextSearch(req proto.Message) (fieldName string, fts *query.FullTextSearch, err error) {
+	fts = new(query.FullTextSearch)
+	fieldName, err = getAndUnsetOp(req, fts, false)
+	if fieldName == "" {
+		fts = nil
+	}
+	return
+}
+
 func GetSorting(req proto.Message) (fieldName string, s *query.Sorting, err error) {
 	s = new(query.Sorting)
 	fieldName, err = getAndUnsetOp(req, s, false)
