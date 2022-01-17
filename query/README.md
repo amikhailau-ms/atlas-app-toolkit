@@ -7,6 +7,7 @@ These types are:
 - `infoblox.api.Pagination`
 - `infoblox.api.PageInfo`(used in response)
 - `infoblox.api.FieldSelection`
+- `infoblox.api.FullTextSearch`
 
 ## Enabling *collection operators* in your application
 
@@ -22,6 +23,7 @@ message MyListRequest {
     infoblox.api.Sorting sorting = 2;
     infoblox.api.Pagination pagination = 3;
     infoblox.api.FieldSelection fields = 4;
+    infoblox.api.FullTextSearch fts = 5;
 }
 ```
 
@@ -162,3 +164,15 @@ server.WithGateway(
   )
 )
 ```
+
+
+## Full Text Search
+
+The syntax of REST representation of `infoblox.api.FullTextSearch` is the following.
+
+| Request Parameter | Description                              |
+| ----------------- |------------------------------------------|
+| _fts              | A string representing the query that should be used for full text search by the service. |
+
+The functionality of the full text search should be implemented by the service itself. This toolkit message type only provides a 
+convenient way to client to send and to server to retrieve it.

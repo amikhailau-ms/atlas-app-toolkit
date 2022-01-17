@@ -74,6 +74,18 @@ message Filtering {
     }
 }
 
+// FullTextSearch represents a query to use for full text search in some object's collection.
+// Usually it contains only simple string we need to filter full object information by
+message FullTextSearch {
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+        json_schema: {
+            type: STRING;
+            description: "atlas.api.full_text_search";
+        };
+    };
+    string query = 1;
+}
+
 // LogicalOperator represents binary logical operator, either AND or OR depending on type.
 // left and right are respectively left and right operands of the operator, could be
 // either LogicalOperator or one of the supported conditions.

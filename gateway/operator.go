@@ -12,6 +12,7 @@ import (
 
 const (
 	filterQueryKey           = "_filter"
+	fullTextSearchQueryKey   = "_fts"
 	sortQueryKey             = "_order_by"
 	fieldsQueryKey           = "_fields"
 	limitQueryKey            = "_limit"
